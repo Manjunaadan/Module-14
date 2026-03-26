@@ -25,11 +25,45 @@ To write a Python program with a function to insert float values into a Circular
 ### PROGRAM
 
 ```
+class Queue:
+def init(self, size):
+self.items = [0] * size
+self.max_size = size
+self.head, self.tail, self.size = 0, 0, 0
+def enqueue(self, item):
+if self.is_list_full():
+print("Queue is full")
+return
+self.items[self.tail]=item
+self.tail=(self.tail+1)%self.max_size
+self.size+=1
+def is_list_full(self):
+if self.size==self.max_size:
+return True
+return False
+
+def is_empty(self):
+if self.size==0:
+return True
+return False
+
+size=int(input())
+queue=Queue(size)
+str=float(input())
+str1=float(input())
+str2=float(input())
+queue.enqueue(str)
+queue.enqueue(str1)
+queue.enqueue(str2)
+print(queue.items)
+
 
 
 ```
 
 ### OUTPUT
+<img width="829" height="259" alt="image" src="https://github.com/user-attachments/assets/aa2ce3cf-6820-4d8f-afd6-7ba20771ab9c" />
 
 
 ### RESULT
+Thus , the given python program is implemented and executed sucessfully.
