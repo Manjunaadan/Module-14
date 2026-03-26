@@ -30,8 +30,40 @@ To write a Python program for simple implementation of Priority Queue using Queu
 ### PROGRAM
 
 ```
+class PriorityQueue(object):
+def init(self):
+self.queue = []
+def str(self):
+return ' '.join([str(i) for i in self.queue])
+def isEmpty(self):
+return len(self.queue) == 0
+def insert(self, data):
+self.queue.append(data)
+def delete(self):
+try:
+max_val = 0
+for i in range(len(self.queue)):
+if self.queue[i] > self.queue[max_val]:
+max_val = i
+item = self.queue[max_val]
+del self.queue[max_val]
+return item
+except IndexError:
+print()
+exit()
+myQueue = PriorityQueue()
+n=int(input())
+for i in range(0, n):
+ele = int(input())
+myQueue.insert(ele)
+
+print(myQueue)
+while not myQueue.isEmpty():
+print(myQueue.delete())
 ```
 
 ### OUTPUT
+<img width="818" height="319" alt="image" src="https://github.com/user-attachments/assets/b992b453-fda4-4395-bdbb-5df2aaa74117" />
 
 ### RESULT
+Thus , the given python program is implemented and executed sucessfully.
